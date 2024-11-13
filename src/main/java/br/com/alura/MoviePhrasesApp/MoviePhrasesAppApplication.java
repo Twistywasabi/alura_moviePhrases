@@ -1,6 +1,6 @@
 package br.com.alura.MoviePhrasesApp;
 
-import br.com.alura.MoviePhrasesApp.Principal.Principal;
+
 import br.com.alura.MoviePhrasesApp.repository.FraseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
