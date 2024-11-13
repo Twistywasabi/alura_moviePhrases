@@ -1,6 +1,7 @@
 package br.com.alura.MoviePhrasesApp.controller;
 
 import br.com.alura.MoviePhrasesApp.Model.Frase;
+import br.com.alura.MoviePhrasesApp.dto.FraseDto;
 import br.com.alura.MoviePhrasesApp.repository.FraseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,8 +14,13 @@ public class FraseController {
     private FraseRepository repositorio;
 
     @GetMapping("/series/frases")
-    public Frase obterFrases() {
-        return repositorio.fraseAleatoria();
+    public FraseDto obterFrases() {
+        Frase fraseAleatoria = repositorio.fraseAleatoria();
+        return new FraseDto(
+                fraseAleatoria.getTitulo(),
+                fraseAleatoria.getFrase(),
+                fraseAleatoria.getPersonagem(),
+                fraseAleatoria.getPoster() );
     }
 
 }

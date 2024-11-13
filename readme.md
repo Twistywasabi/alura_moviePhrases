@@ -4,7 +4,18 @@ A Movies Phrase app based on mini Challenge of Alura in "Java: Criando sua prime
 
 ## Objective 📜
 
-Create a fullstack application where the user click in a button and a new poster and phrse shows in the screen.
+Create a fullstack application where the user click in a button and a new poster and phrase shows in the screen.
+
+The Website Repository can be found in this link: https://github.com/jacqueline-oliveira/3356-java-desafio-front
+
+The frontend ("http://127.0.0.1:5501") makes a GET requisition to the endpoint "http://localhost:8080/series/frases" that returns a JSON with this structure:
+
+- titulo: String ("Star Wars")
+- Frase: String ("May The Force Be With You")
+- Personagem: String ("Obi Wan Kenobi")
+- Poster: String (	"https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_SX300.jpg")
+
+PostgreSQL was used to store the movies data
 
 ## Technologies and Tools 👨‍💻
 
@@ -14,8 +25,11 @@ Create a fullstack application where the user click in a button and a new poster
   - Spring Data JPA
   - PostgreSQL Driver
   - Springboot Dev Tools
+- PostgreSQL
 
 ## Result 🎁
+
+![Alt text](/src/img/result.PNG)
 
 ## References 📚
 
@@ -24,4 +38,9 @@ Create a fullstack application where the user click in a button and a new poster
 
 ## Updates 🕐
 
+2024/11/13 - First version
+
 ## Pending issues 🚨
+
+- Add DevTools for Hot Reload
+- A function to add a movie to database
