@@ -8,20 +8,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MoviePhrasesAppApplication implements CommandLineRunner {
+public class MoviePhrasesAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MoviePhrasesAppApplication.class, args);
 	}
 
-	@Autowired
-	private FraseRepository repositorio;
-
-	@Override
-	public void run(String... args) throws Exception {
-
-		Principal principal = new Principal(repositorio);
-		principal.exibeMenu();
-
-	}
 }
